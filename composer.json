@@ -1,0 +1,19 @@
+{
+    "name": "bart/gente-qfaz",
+    "description": "Projeto gente-qfaz",
+    "authors": [
+        {
+            "name": "Bruce Silva",
+            "email": "bruce_silva1010@hotmail.com"
+        }
+    ],
+    "require": {},
+    "autoload":{
+    	"psr-4":{
+    		"App\\":"app",
+    		"Controller\\":"controller",
+    		"Model\\":"model",
+    		"View\\":"view"
+    	}
+    }
+}
