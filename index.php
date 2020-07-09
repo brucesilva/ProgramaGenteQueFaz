@@ -39,41 +39,48 @@
 </head>
 <body>
 
+
+		<div class="container-fluid contH1">
+			<div class="row linhaH1">
+				<div class="col-md-12 colH1">
+					<h1>Programa Gente que Faz</h1>
+				</div>
+			</div>
+		</div>
+
 	 	<!--Div principal do Site -->
 		<div class="containerPrincipal container-fluid p-0 m-0 mb-0 pb-0"> 
 
+			<!--Container do meio -->
 			<div class="container-fluid">
 
 			  <div class="row linha" >
 
-			    <div class="col-md-3">
+			  	<!--Div que fica a imagem -->
+			    <div class="col-md-3 colImg">
 			    	<img src="img/seara.png">
 			    </div><!--Fecha div col-md-3 -->
 
-			    <div class="col-md-2">
+			    <!--Div que fica os nome-->
+			    <div class="col-md-2 colLabel">
 			    	<label class="label1" style="color: white; font-size: 17px;">Please log on</label><br>
 			    	<label class="label" style="color: gray; font-size: 12px; "> User name:</label><br>
 			    	<label class="label" style="color: gray; font-size: 12px;">Password</label>
 			    </div> <!--Fecha div col-md-2 -->
 
-			    <div class="col-md-7">
-			    	 
+			    <!--Div que fica os input -->
+			    <div class="col-md-7 colInputs">
 			    	<input type="text" name=""><br>
 			    	<input type="password" name=""><br>
 			    	<button class="btn btn-primary">Submit</button> 
 			    </div> <!--Fecha div col-md-7 -->
 
 			  </div><!--Fecha div row linha -->
- 
+
 			</div><!--Fecha div container-fluid 2 -->
 
-		</div><!--Fecha div container-fluid -->
+		</div><!--Fecha div container-fluid a principal que pega todo o site-->
 	 
-
-
-
-
-
 
 
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>

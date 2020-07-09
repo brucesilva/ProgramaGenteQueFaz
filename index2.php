@@ -40,49 +40,16 @@
 <body>
 
 	 	<!--Div principal do Site -->
-		<div class="containerPrincipal container-fluid p-0 m-0 mb-0 pb-0">
-
-			 
-			 
-
- 			<!-- Div do meio, onde vai a imagem e os campos de senha -->
-			<div class="containerMeio container-fluid h-50">
-				 <!-- Div que esta dentro da div do meio, para colocar o log e os campos de user e senh -->
-				<div class="container login">
-
-
-					<div class="row">
-						<div class="col-md-4 img1">  
-							<img src="img/seara2.png" />
-						</div><!--Fecha div img1-->
-
-						<div class="col-md-2">
-							<label style="color: white"></style> Please log on</label><br>
-						</div>
-
-						<div class="col-md-6 campos">
-							 <form> 
-							 	
-							 	<label>user name:</label> <input type="text" name=""> <br>
-							 	<label>password:</label>  <input type="password" name=""> <br>
-							 	<button class="btn btn-success">Submit</button>
-							 </form>
-						</div><!--Fecha div campos-->
-
-
-					</div><!--Fecha div row-->
-					  
-				</div><!--Fecha div containerLogin-->
-
-			</div><!--Fecha div containerMeio-->
-
+		<div class="containerPrincipal2 container-fluid p-0 m-0 mb-0 pb-0"> 
+			
+			<div class="container-fluid con">
+				<div class="row linha2">
+					<div class="col-md-12 col12">
+						dlkajdfkl
+					</div>
+				</div>
 		</div><!--Fecha div container-fluid -->
 	 
-
-
-
-
-
 
 
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
