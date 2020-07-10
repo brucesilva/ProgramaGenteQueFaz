@@ -34,21 +34,73 @@
 	<meta name="viewport" content="width=device-width, initial-scale-1">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 
-	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/style3.css">
+
+	 <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
 
 </head>
 <body>
 
-	 	<!--Div principal do Site -->
-		<div class="containerPrincipal2 container-fluid p-0 m-0 mb-0 pb-0"> 
+		 
+		<!-- Conteudo -->
+    <section id="servicos">
+      <div class="container">
+        <div class="row">
+          <!-- coluna para o album -->
+          <div class="col-md-6" >
+
+            <div class="row albuns">
+              <div class="col-md-6">
+                                    <!-- class="img-responsive" para tornar a img responsiva -->
+                <img src="../img/seara.png" class="img-responsive"> 
+              </div><!-- col-md-6 album -->
+
+              <div class="col-md-6">
+               <img src="../img/fundo.jpg" class="img-responsive">
+              </div><!-- col-md-6 album --> 
+            </div> <!-- row -->
+
+            <div class="row albuns">
+              <div class="col-md-6">
+                                    <!-- class="img-responsive" para tornar a img responsiva -->
+                <img src="../img/fundo.jpg" class="img-responsive"> 
+              </div><!-- col-md-6 album -->
+
+              <div class="col-md-6">
+               <img src="../img/fundo.jpg" class="img-responsive">
+              </div><!-- col-md-6 album --> 
+            </div> <!-- row -->
+
+          </div><!-- col-md-6 album -->
+
+          <!-- coluna para o Serviços -->
+          <div class="col-md-6" >
+            <h2>O que o Spotify tem?</h2>
+
+            <h3>Músicas</h3>
+            <p>O spotify tem milhoes de músicas, Escute seus sons favoritos, descubra novas músicas
+            e reúna seus favoritos em um só lugar.</p>
+
+            <h3>Playlists</h3>
+            <p>O spotify tem milhoes de músicas, Escute seus sons favoritos, descubra novas músicas
+            e reúna seus favoritos em um só lugar.</p>
+
+            <h3>Novos Lançamentos</h3>
+            <p>O spotify tem milhoes de músicas, Escute seus sons favoritos, descubra novas músicas
+            e reúna seus favoritos em um só lugar.</p>
+
+          </div><!-- col-md-6 Serviçoss -->
+        </div><!-- row --> 
+      </div><!-- container -->
+    </section><!-- section -->
 			
-			<div class="container-fluid con">
-				<div class="row linha2">
-					<div class="col-md-12 col12">
-						dlkajdfkl
-					</div>
-				</div>
-		</div><!--Fecha div container-fluid -->
+
+	 
 	 
 
 
@@ -58,3 +110,5 @@
 
 </body>
 </html>
+
+

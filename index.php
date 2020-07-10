@@ -37,8 +37,7 @@
 	<link rel="stylesheet" href="css/style.css">
 
 </head>
-<body>
-
+<body> 
 
 		<div class="container-fluid contH1">
 			<div class="row linhaH1">
@@ -49,16 +48,15 @@
 		</div>
 
 	 	<!--Div principal do Site -->
-		<div class="containerPrincipal container-fluid p-0 m-0 mb-0 pb-0"> 
-
+		<div class="containerPrincipal container-fluid p-0 m-0 mb-0 pb-0">  
 			<!--Container do meio -->
 			<div class="container-fluid">
 
-			  <div class="row linha" >
+			  <div class="row linha">
 
 			  	<!--Div que fica a imagem -->
-			    <div class="col-md-3 colImg">
-			    	<img src="img/seara.png">
+			    <div class="col-md-3 colImg" >
+			    	<img class="imgSeara" src="img/seara.png" class="img-responsive">
 			    </div><!--Fecha div col-md-3 -->
 
 			    <!--Div que fica os nome-->
@@ -69,16 +67,29 @@
 			    </div> <!--Fecha div col-md-2 -->
 
 			    <!--Div que fica os input -->
-			    <div class="col-md-7 colInputs">
+			    <div class="col-md-7 colInputs" >
 			    	<input type="text" name=""><br>
 			    	<input type="password" name=""><br>
 			    	<button class="btn btn-primary">Submit</button> 
 			    </div> <!--Fecha div col-md-7 -->
+ 				
 
-			  </div><!--Fecha div row linha -->
+			    <div class="row login2">
+					<div class="col-md-12 colInputs conteudo4">
 
-			</div><!--Fecha div container-fluid 2 -->
+						<label class="label1" style="color: white; font-size: 17px;  width: 390px; text-align: left; ">Please log on</label><br> 
+						<label class="label" style="color: gray; font-size: 12px; width: 390px; text-align: left;"> User name:</label><br>
 
+						<input type="text" name="" class=""><br>
+						<label class="label" style="color: gray; font-size: 12px; width: 390px; text-align: left; margin-top: -2px;">Password:</label><br>
+						<input type="password" name=""><br>
+
+						<button class="btn btn-primary">Submit</button>   
+					 </div>
+				</div>
+
+			  </div><!--Fecha div row linha -->  
+			</div><!--Fecha div container-fluid 2 --> 
 		</div><!--Fecha div container-fluid a principal que pega todo o site-->
 	 
 
