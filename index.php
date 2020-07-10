@@ -5,8 +5,10 @@
 	use App\Model\Login;
 	use App\Model\LoginModel;
 
-	$conn = new ConexaoBDO(); 
+	 
 
+	/*
+	$conn = new ConexaoBDO();  
 	try {
 
 		//Fazendo a conexão com o BDO
@@ -22,6 +24,7 @@
 	} catch (PDOException $e) {
 		echo "Erro --> ".$e->getMessage();
 	} 
+*/
  ?>
 
 
@@ -70,9 +73,9 @@
 			    <!--Div que fica os input -->
 			    <div class="col-md-7 colInputs" >
 
-					<form action="votacao.php" method="post">  
-					    	<input type="text" name="user"><br>
-					    	<input type="password" name="password"><br> 
+					<form action="App/Controller/controller.php" method="post">  
+					    	<input type="text" name="user" required><br>
+					    	<input type="password" name="password" required><br> 
 					    	<button class="btn btn-primary">Submit</button> 
 					 </form>	
 			    </div> <!--Fecha div col-md-7 -->
@@ -82,12 +85,12 @@
 					<div class="col-md-12 colInputs conteudo4"> 
 						<label class="label1" style="color: white; font-size: 17px;  width: 390px; text-align: left; ">Please log on</label><br>
 
-						<form action="votacao.php" method="post"> 
+						<form action="App/Controller/controller.php" method="post"> 
 							<label class="label" style="color: gray; font-size: 12px; width: 390px; text-align: left;"> User name:</label><br>
-							<input type="text" name="user" class=""><br>
+							<input type="text" name="user" class="" ><br>
 							
 							<label class="label" style="color: gray; font-size: 12px; width: 390px; text-align: left; margin-top: -2px;">Password:</label><br>
-							<input type="password" name="password"><br>
+							<input type="password" name="password" ><br>
 
 							<button class="btn btn-primary">Submit</button>  
 						</form> <!--Fecha form -->  

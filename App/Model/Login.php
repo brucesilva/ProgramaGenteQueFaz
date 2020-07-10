@@ -1,7 +1,7 @@
 <?php 
 
 	namespace App\Model;
-	
+		
 
 	class Login{
 
@@ -28,9 +28,9 @@
 			$stmt->execute();
 
 			if($stmt->rowCount() > 0){ 
-				header('Location:votacao.php');
+				header('Location:../../votacao.php');
 			}else{
-				echo "Usuário não cadastrado no BD";
+				header('Location:../../index.php?login=1');
 			} 
 		}
  
@@ -47,6 +47,10 @@
 			 	echo '<br>';
 			 } 
 
+		}
+
+		public function teste(){
+			echo "Estou na classe de login";
 		}
 
 	}//fecha a classe principal

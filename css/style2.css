@@ -1,0 +1,128 @@
+body{
+    background: url(../img/fundo.jpg);  
+    background-size: cover;
+}
+ 
+.colH1{
+	text-align: center;
+	color: white;
+	margin-top: 40px;
+}
+
+.containerPrincipal{
+	 
+	height: calc(100vh - 100px);
+	display: flex; /*Aqui é pra flutuar */
+	align-items: center; /*Aqui é pra ficar no center os itens que tem dentro da DIV */ 
+	 
+}
+
+.linha{
+	 
+	height: 410px; 
+	padding: 30px 10px;
+	background-color: rgba(63,54,67,0.8);: 
+}
+
+.colLabel{ 
+	padding-top: 45px;
+	text-align: center;
+ 
+	 
+}
+.colImg{
+	display: flex;
+	align-items: center; 
+	padding-left: 65px;
+}
+
+.imgSeara{
+
+}
+
+.label{ 
+	margin-top: 25px; 
+	text-align: center;
+	color: red;
+	
+}
+
+.colInputs{
+	padding-top: 100px; 
+	 
+
+}
+.colInputs input[type="text"]{
+	height: 45px;
+	width: 386px;
+	margin-bottom: 3px;
+}
+
+.colInputs input[type="password"]{
+	height: 45px;
+	width: 386px;
+	margin-bottom: 3px;
+}
+
+.colInputs button{
+	height: 40px;
+	width: 386px;
+	margin-top: 15px;
+}
+.btn{
+	background-color: #02a1c1;
+}
+
+.meiaTela{
+	display: none;
+}
+.conteudo4{
+    display: none;
+    align-items: center;
+ }
+
+.login2{
+    display: table; /*deixar centralizado - Esse display é pra ter o comportamento igual tabela */
+	width: 100%; /*Pegando 100* */  
+ }
+
+ /*  Extra small devices (portrait phones, less than 576px) */
+		@media (max-width: 575.98px) { 
+			  
+		 }
+
+		/* Small devices (landscape phones, less than 768px)*/
+		@media (max-width: 767.98px) { 
+			h1{
+				font-size: 30px;
+			}
+		 }
+
+		/* Medium devices (tablets, less than 992px)*/
+		@media (max-width: 991.98px) { 
+ 			.colImg{
+			 	display: none;
+			 }
+			 .colLabel{
+			 	display: none;
+			 }
+			 .colInputs{
+			 	display: none;
+			 }
+
+			 .conteudo4{
+			 	display: block; 
+			 	padding-top: 0px;  
+			 	text-align: center; 
+			 } 
+
+			 h1{
+			 	font-size: 30px;
+			 }
+		 }
+
+		/* Large devices (desktops, less than 1200px)*/
+		@media (max-width: 1199.98px) { 
+
+		 }
+ 
