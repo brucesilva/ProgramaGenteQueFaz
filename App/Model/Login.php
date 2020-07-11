@@ -27,11 +27,9 @@
 
 			$stmt->execute();
 
-			if($stmt->rowCount() > 0){ 
-				header('Location:../../votacao.php');
-			}else{
-				header('Location:../../index.php?login=1');
-			} 
+			//aqui verifico se ele me retorna um valor maior q 0
+			//que significa que existe o usuário e a senha no BDO
+			return $stmt->rowCount();
 		}
  
 		public function read(){

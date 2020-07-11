@@ -5,26 +5,6 @@
 	use App\Model\Login;
 	use App\Model\LoginModel;
 
-	 
-
-	/*
-	$conn = new ConexaoBDO();  
-	try {
-
-		//Fazendo a conexão com o BDO
-		$conn->Conecta();
-		 
-		$loginModel = new LoginModel();
-		//$loginModel->__set('user','bruce');
-		//$loginModel->__set('senha','123');
-
-		$login = new Login($conn, $loginModel);
-		//$login->read();
-
-	} catch (PDOException $e) {
-		echo "Erro --> ".$e->getMessage();
-	} 
-*/
  ?>
 
 
@@ -76,7 +56,15 @@
 					<form action="App/Controller/controller.php" method="post">  
 					    	<input type="text" name="user" required><br>
 					    	<input type="password" name="password" required><br> 
-					    	<button class="btn btn-primary">Submit</button> 
+					    	<button class="btn btn-primary">Submit</button>
+
+					    	<!--Aqui vou dá uma msg caso o usúario não esteja cadastrado -->
+							<?php if ( isset($_GET['login']) && $_GET['login']== 1 ){ ?>
+								<p style="color: red;"> @ Incorrect user name or password</p>
+							<?php } else if(isset($_GET['login']) && $_GET['login']== 0 ) { ?>
+								<p style="color: red;"> @ Favor logar com seu usuário e senha</p>
+							<?php } ?>
+
 					 </form>	
 			    </div> <!--Fecha div col-md-7 -->
  			
@@ -93,6 +81,12 @@
 							<input type="password" name="password" ><br>
 
 							<button class="btn btn-primary">Submit</button>  
+
+							<!--Aqui vou dá uma msg caso o usúario não esteja cadastrado -->
+							<?php if ( isset($_GET['login']) && $_GET['login']== 1 ){ ?>
+								<p style="color: red; margin-left: -140px"> @ Incorrect user name or password</p>
+							<?php } ?>
+
 						</form> <!--Fecha form -->  
 					 </div><!--Fecha div conteudo4 -->  
 				</div><!--Fecha row login2 -->  

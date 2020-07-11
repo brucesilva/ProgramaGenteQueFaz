@@ -32,8 +32,17 @@
 	 	$loginModel->__set('senha', $_POST['password']);
 
 	 	$login = new Login($conn, $loginModel);
-	 	$login->autenticacao();
-	 	 
-	 }
+
+	 	/*se caso tenha o usuário e a senha, o retorno é 1 */
+	 	if($login->autenticacao() > 0){ 
+	 		//aqui se o usuário estiver ok, eu crio uma sessão para ser recuperado na página de votação
+	 		session_start();
+	 		$_SESSION['logado'];
+			header('Location:../../votacao.php');
+		}else{
+			header('Location:../../index.php?login=1');
+		}
+	 	
+	}
 
  ?>

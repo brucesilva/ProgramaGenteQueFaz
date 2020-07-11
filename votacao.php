@@ -2,6 +2,16 @@
 	echo '<pre>';
 	echo print_r($_POST);
 	echo '</pre>';
+
+	session_start();
+	//verificando se o usuário está tentando acessar via URL
+	if( isset($_SESSION['logado'])){
+		echo "Usuário logado com sucesso";
+	}else{
+		header('Location:index.php?login=0');
+	}
+
+
  ?>
 
 
