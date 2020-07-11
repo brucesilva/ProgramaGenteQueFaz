@@ -89,9 +89,13 @@
 
 							<!--Aqui vou dá uma msg caso o usúario não esteja cadastrado -->
 							<?php if ( isset($_GET['login']) && $_GET['login']== 1 ){ ?>
-								<p style="color: red; margin-left: -140px"> @ Incorrect user name or password</p>
-							<?php } ?>
+								<p style="color: red;"> @ Incorrect user name or password</p>
+							<?php } else if(isset($_GET['login']) && $_GET['login']== 0 ) { ?>
 
+								<p style="color: red;"> @ Favor logar com seu usuário e senha</p>
+
+							<?php  } ?>
+							
 						</form> <!--Fecha form -->  
 					 </div><!--Fecha div conteudo4 -->  
 				</div><!--Fecha row login2 -->  

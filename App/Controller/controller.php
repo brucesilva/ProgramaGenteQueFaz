@@ -38,6 +38,8 @@
 	 		//aqui se o usuário estiver ok, eu crio uma sessão para ser recuperado na página de votação
 	 		session_start();
 	 		$_SESSION['logado'] = true;
+	 		//aqui estou passando a pessoa que está logada no sistema
+	 		$_SESSION['user'] = $_POST['user'];
 			header('Location:../../votacao.php');
 		}else{
 			header('Location:../../index.php?login=1');
