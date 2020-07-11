@@ -5,11 +5,11 @@
 
 	session_start();
 	//verificando se o usuário está tentando acessar via URL
-	if( isset($_SESSION['logado'])){
-		echo "Usuário logado com sucesso";
-	}else{
-		header('Location:index.php?login=0');
-	}
+	if(!isset($_SESSION['logado']) == true){
+		//destruindo a sessão
+		unset($_SESSION['logado']);
+		header('Location:index.php?login=0');  
+	} 
 
 
  ?>

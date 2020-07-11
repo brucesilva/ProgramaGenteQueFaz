@@ -5,6 +5,10 @@
 	use App\Model\Login;
 	use App\Model\LoginModel;
 
+	//aqui estou matando qualquer sessão que vinher pra cá
+	session_start(); 
+	unset($_SESSION['logado']);
+
  ?>
 
 
@@ -62,9 +66,10 @@
 							<?php if ( isset($_GET['login']) && $_GET['login']== 1 ){ ?>
 								<p style="color: red;"> @ Incorrect user name or password</p>
 							<?php } else if(isset($_GET['login']) && $_GET['login']== 0 ) { ?>
-								<p style="color: red;"> @ Favor logar com seu usuário e senha</p>
-							<?php } ?>
 
+								<p style="color: red;"> @ Favor logar com seu usuário e senha</p>
+
+							<?php  } ?>
 					 </form>	
 			    </div> <!--Fecha div col-md-7 -->
  			

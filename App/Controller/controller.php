@@ -21,7 +21,7 @@
 	 	header('Location:../../index.php?false');
 	 
 	 }else{
- 
+
 	 	//aqui vou enviar o usuário e o login para verificar se existe no BDO
 	 	 
 	 	$conn = new ConexaoBDO();
@@ -37,7 +37,7 @@
 	 	if($login->autenticacao() > 0){ 
 	 		//aqui se o usuário estiver ok, eu crio uma sessão para ser recuperado na página de votação
 	 		session_start();
-	 		$_SESSION['logado'];
+	 		$_SESSION['logado'] = true;
 			header('Location:../../votacao.php');
 		}else{
 			header('Location:../../index.php?login=1');
