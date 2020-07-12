@@ -1,4 +1,9 @@
 <?php 
+
+   require_once("vendor/autoload.php");
+   use App\Model\LoginModel;
+
+
 /*
 	echo '<pre>';
 	echo print_r($_POST);
@@ -13,14 +18,12 @@
 		header('Location:index.php?login=0');  
 	}  
 
-
-
 		//verificando qual foi o radio button selecionado
 		$votado = $_POST['voto'];
-
 		echo $votado; 
 
-		 
+		//Aqui estou pegando o usuário logado
+ 		$user = $_SESSION['user']; ;
 
  ?>
 
@@ -37,12 +40,44 @@
 
 	<script type="text/javascript">
 			
-		function pegaRadio(){
-			var votos = document.getElementsByName("voto"); 
-			 
-		}
 
-		
+		function pegaRadio(){
+
+			var votos = document.getElementsByName("voto"); 
+			var btn = document.getElementById('btnVoto');
+			//aqui estou passando o usuário que está logado
+			var user = "<?php echo $user;?>";
+   		 
+			if(user == 'Aldines'){
+				if(votos[0].checked){
+					votos[0].disabled = true;
+					btn.disabled = true; 
+				}else{
+					btn.disabled = false;
+				}
+			}  				
+			
+
+			if(user == 'Alessandro'){
+				if(votos[1].checked){
+					votos[1].disabled = true;
+					btn.disabled = true; 
+				}else{
+					btn.disabled = false;
+				}
+			}  	
+
+			 if(user == 'Ana'){
+				if(votos[2].checked){
+					votos[2].disabled = true;
+					btn.disabled = true; 
+				}else{
+					btn.disabled = false;
+				}
+			}  	
+			
+		}
+ 
 
 	</script>
 	
@@ -65,7 +100,7 @@
  
 					<div class="col-md-6" style="border: 1px solid yellow;" >
 						<label class="radio">
-							<input type="radio" name="voto" id="b" value="aldines" onclick="pegaRadio()"> Aldines dos Santos lima <br>
+							<input type="radio" name="voto" id="t" value="aldines" onclick="pegaRadio()"> Aldines dos Santos lima <br>
 						</label><br>
 
 						<label class="radio">
@@ -139,13 +174,13 @@
 						</label><br> 
 
 						<label class="radio">
-							<input type="radio" name="voto" id="b" value="monica" onclick="pegaRadio()"> Monica Luzia da Silva <br>	  
+							<input type="radio" name="voto" id="b" value="monica" onclick="pegaRadio()"> Monica Luzia da SIlva <br>	  
 						</label><br> 
 
 
 					</div><!--/col-md-6 -->
 					 
-					<button class="btn btn-primary btn-lg btn-block" >Votar</button> 
+					<button class="btn btn-primary btn-lg btn-block" id="btnVoto" disabled >Votar</button> 
 				</div><!--/row votação --> 
 			</div><!--/Container -->
 		</div><!--/Container-fluid votacao -->

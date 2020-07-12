@@ -20,10 +20,10 @@
 			  
 			//echo "Estou dentro do autenticacao --> ".$this->login->__get('user');
 			  
-			$sql = "SELECT * FROM login WHERE user = :user and senha = :senha";
+			$sql = "SELECT * FROM login WHERE user = :user and cpf = :cpf";
 			$stmt = $this->conn->prepare($sql);
 			$stmt->bindValue(':user', $this->login->__get('user'));
-			$stmt->bindValue(':senha', $this->login->__get('senha'));
+			$stmt->bindValue(':cpf', $this->login->__get('senha'));
 
 			$stmt->execute();
 

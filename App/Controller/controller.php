@@ -39,7 +39,8 @@
 	 		session_start();
 	 		$_SESSION['logado'] = true;
 	 		//aqui estou passando a pessoa que está logada no sistema
-	 		$_SESSION['user'] = $_POST['user'];
+	 		$_SESSION['user'] = $_POST['user']; 
+	 		
 			header('Location:../../votacao.php');
 		}else{
 			header('Location:../../index.php?login=1');

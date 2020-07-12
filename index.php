@@ -79,6 +79,7 @@
 						<label class="label1" style="color: white; font-size: 17px;  width: 390px; text-align: left; ">Please log on</label><br>
 
 						<form action="App/Controller/controller.php" method="post"> 
+							
 							<label class="label" style="color: gray; font-size: 12px; width: 390px; text-align: left;"> User name:</label><br>
 							<input type="text" name="user" class="" ><br>
 							
