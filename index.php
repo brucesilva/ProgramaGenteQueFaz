@@ -26,6 +26,20 @@
 </head>
 <body> 
 
+		<?php if(isset($_GET['voto']) && $_GET['voto'] == 'ok'){?>  
+
+			<!--Aqui é um alert que dou depois que o usuário vota -->
+			<div class="alert alert-success alert-dismissible fade show" role="alert" style="text-align: center; font-size: 20px;">
+  				<strong>Obrigado pelo seu Voto</strong> 
+  				<!--data-dismiss="alert" serve para clicarmos no x e fechar o alert -->
+  				<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+  					<!--esse span é o icone do X -->
+    			<span aria-hidden="true">&times;</span>
+  				</button>
+			</div>
+
+		<?php }?>
+
 		<div class="container-fluid contH1">
 			<div class="row linhaH1">
 				<div class="col-md-12 colH1">
@@ -33,7 +47,7 @@
 				</div>
 			</div>
 		</div>
-
+  
 	 	<!--Div principal do Site -->
 		<div class="containerPrincipal container-fluid p-0 m-0 mb-0 pb-0">  
 			<!--Container do meio -->
@@ -58,6 +72,7 @@
 			    <div class="col-md-7 colInputs" >
 
 					<form action="App/Controller/controller.php" method="post">  
+
 					    	<input type="text" name="user" required><br>
 					    	<input type="password" name="password" required><br> 
 					    	<button class="btn btn-primary">Submit</button>

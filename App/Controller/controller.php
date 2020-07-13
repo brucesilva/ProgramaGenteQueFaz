@@ -16,6 +16,8 @@
 	 echo print_r($_POST);
 	 echo '</pre>';
 
+	 //Lógica pra pegar o usuário e a senha e verificar se os dois existem
+
 	 //Aqui estou verificando se o formulário está sendo preenchido
 	 if(isset($_POST['user']) && $_POST['user'] == '' || $_POST['password'] == ''){
 	 	header('Location:../../index.php?false');
@@ -33,7 +35,7 @@
 
 	 	$login = new Login($conn, $loginModel);
 
-	 	/*se caso tenha o usuário e a senha, o retorno é 1 */
+	 	/*se caso tenha o usuário e a senha, o retorno é 1  */
 	 	if($login->autenticacao() > 0){ 
 	 		//aqui se o usuário estiver ok, eu crio uma sessão para ser recuperado na página de votação
 	 		session_start();
@@ -47,5 +49,6 @@
 		}
 	 	
 	}
+ 
 
  ?>

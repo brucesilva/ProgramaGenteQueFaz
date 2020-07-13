@@ -1,8 +1,7 @@
 <?php 
 
    require_once("vendor/autoload.php");
-   use App\Model\LoginModel;
-
+   use App\Model\LoginModel; 
 
 /*
 	echo '<pre>';
@@ -19,12 +18,95 @@
 	}  
 
 		//verificando qual foi o radio button selecionado
-		$votado = $_POST['voto'];
-		echo $votado; 
+		//$votado = $_POST['voto'];
+		//echo $votado; 
 
 		//Aqui estou pegando o usuário logado
- 		$user = $_SESSION['user']; ;
+ 		$user = $_SESSION['user'];
 
+ 		//Aqui estou passando o login para o nome do usuário
+ 		if($user == 'adslima'){
+ 			$nome = 'Aldines';
+ 		}
+ 		if($user == 'acarraro'){
+ 			$nome = 'Ana Carolina';
+ 		}
+
+ 		if($user == 'aalvaren'){
+ 			$nome = 'Alessandro';
+ 		}
+
+ 		if($user == 'aperei17'){
+ 			$nome = 'Antonio Carlos';
+ 		}
+
+ 		if($user == 'casilva'){
+ 			$nome = 'Celma';
+ 		}
+
+ 		if($user == 'cmdcost2'){
+ 			$nome = 'Caio';
+ 		}
+
+ 		if($user == 'dvrdort1'){
+ 			$nome = 'Debora';
+ 		}
+
+ 		if($user == 'jdrsilva'){
+ 			$nome = 'João';
+ 		}
+
+ 		if($user == 'jfbdsil1'){
+ 			$nome = 'Fabrício Barros';
+ 		}
+
+ 		if($user == 'jpereira'){
+ 			$nome = 'Juliano';
+ 		}
+
+ 		if($user == 'jemlima'){
+ 			$nome = 'Jhonatan';
+ 		}
+
+ 		if($user == 'kjdsilv1'){
+ 			$nome = 'Kleber';
+ 		}
+
+ 		if($user == 'ldarri'){
+ 			$nome = 'Leandra Darri';
+ 		}
+
+ 		if($user == 'lgcosta2'){
+ 			$nome = 'Leandro';
+ 		}
+
+ 		if($user == 'Luis'){
+ 			$nome = 'Luis';
+ 		}
+
+ 		if($user == 'maverdi'){
+ 			$nome = 'Marcelo';
+ 		}
+
+ 		if($user == 'Dalva'){
+ 			$nome = 'Dalva';
+ 		}
+
+ 		if($user == 'mrfngama'){
+ 			$nome = 'Mariane';
+ 		}
+
+ 		if($user == 'mlsilva'){
+ 			$nome = 'Mônica';
+ 		}
+
+ 		if($user == 'pfdsous2'){
+ 			$nome = 'pedroz';
+ 		}
+
+ 		if($user == 'lsobiesk'){
+ 			$nome = 'Leandra Sobieski';
+ 		}
 
  ?>
 
@@ -233,8 +315,7 @@
 					btn.disabled = false;
 				}
 			}
-
-
+ 
 		}
  
 
@@ -246,23 +327,25 @@
 	<div class="container-fluid mt-5">
 		<div class="row">
 			<div class="col-md-12">
-				<h1 style="color: white; text-align: center;">Bem vindo <?= $_SESSION['user']; ?></h1>
+				<!-- <h1 style="color: white; text-align: center;">Bem vindo <?= $_SESSION//['user']; ?></h1> -->
+				<h1 style="color: white; text-align: center;">Bem vindo <?=$nome; ?></h1>
 			</div><!--/col-md-12 -->
 		</div><!--/row Cabeçalho -->
 	</div><!--/Container-fluid Topo -->
 
-	<form action="votacao.php" method="post" >
+	<form action="App/Controller/controllerVotos.php" method="POST" >
 		<!--aqui vai ficar os radios button para votação -->
 		<div class="container-fluid mt-3 container-meio pt-3">
 			<div class="container" >
 				<div class="row">
  
-					<div class="col-md-6"  >
-						<label class="radio">
-							<input type="radio" name="voto" id="t" value="aldines" onclick="pegaRadio()"> Aldines dos Santos lima <br>
+					<div class="col-md-6"   >
+						<label class="radio" >
+							<input type="radio" name="voto" id="t" value="aldines" onclick="pegaRadio()">  
+							 Aldines dos Santos lima <br>
 						</label><br>
 
-						<label class="radio">
+						<label class="radio" >
 							<input type="radio" name="voto" id="b" value="alessandro" onclick="pegaRadio()"> Alessandro Alvarenga <br>	
 						</label><br>
 
@@ -299,7 +382,7 @@
 						</label><br> 
 					</div><!--/col-md-6 -->
 
-					<div class="col-md-6" >
+					<div class="col-md-6"  >
 						 <label class="radio">
 							<input type="radio" name="voto" id="b" value="jhonatan" onclick="pegaRadio()"> Jhonatan Elias Monteiro Lima <br>	  
 						</label><br> 
@@ -321,7 +404,7 @@
 						</label><br> 
 
 						<label class="radio">
-							<input type="radio" name="voto" id="b" value="marcelo" onclick="pegaRadio()"> Marcelo Antonio Vedi <br>	  
+							<input type="radio" name="voto" id="b" value="marcelo" onclick="pegaRadio()"> Marcelo Antonio Verdi <br>	  
 						</label><br> 
 
 						<label class="radio">
@@ -343,7 +426,7 @@
 
 					</div><!--/col-md-6 -->
 					 
-					<button class="btn btn-primary btn-lg btn-block mt-3" id="btnVoto" disabled >Vote no funcionário do mês do seu setor</button> 
+					<button class="btn btn-primary btn-lg btn-block mt-3 mb-2" id="btnVoto" disabled >Vote no funcionário do mês do seu setor</button> 
 				</div><!--/row votação --> 
 			</div><!--/Container -->
 		</div><!--/Container-fluid votacao -->
