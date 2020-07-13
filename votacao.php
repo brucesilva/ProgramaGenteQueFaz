@@ -341,62 +341,62 @@
  
 					<div class="col-md-6"   >
 						<label class="radio" >
-							<input type="radio" name="voto" id="t" value="aldines" onclick="pegaRadio()">  
+							<input type="radio" name="voto" id="t" value="adslima" onclick="pegaRadio()">  
 							 Aldines dos Santos lima <br>
 						</label><br>
 
 						<label class="radio" >
-							<input type="radio" name="voto" id="b" value="alessandro" onclick="pegaRadio()"> Alessandro Alvarenga <br>	
+							<input type="radio" name="voto" id="b" value="aalvaren" onclick="pegaRadio()"> Alessandro Alvarenga <br>	
 						</label><br>
 
 						<label class="radio">
-							<input type="radio" name="voto" id="b" value="ana" onclick="pegaRadio()"> Ana Carolina Carraro <br>	
+							<input type="radio" name="voto" id="b" value="acarraro" onclick="pegaRadio()"> Ana Carolina Carraro <br>	
 						</label><br>
 
 						<label class="radio">
-							<input type="radio" name="voto" id="b" value="antonio" onclick="pegaRadio()"> Antonio Tavares <br>
+							<input type="radio" name="voto" id="b" value="aperei17" onclick="pegaRadio()"> Antonio Tavares <br>
 						</label><br>
 
 						<label class="radio">
-							<input type="radio" name="voto" id="b" value="celma" onclick="pegaRadio()"> Celma Aparecida Rodrigues <br>
+							<input type="radio" name="voto" id="b" value="casilva" onclick="pegaRadio()"> Celma Aparecida Rodrigues <br>
 						</label><br>
 
 						<label class="radio">
-							<input type="radio" name="voto" id="b" value="caio" onclick="pegaRadio()"> Caio Matheus da Costa <br>	 
+							<input type="radio" name="voto" id="b" value="cmdcost2" onclick="pegaRadio()"> Caio Matheus da Costa <br>	 
 						</label><br>
 
 						<label class="radio">
-							<input type="radio" name="voto" id="b" value="debora" onclick="pegaRadio()"> Debora Vitória Rodrigues Dorta <br>
+							<input type="radio" name="voto" id="b" value="dvrdort1" onclick="pegaRadio()"> Debora Vitória Rodrigues Dorta <br>
 						</label><br>
 
 						<label class="radio">
-							<input type="radio" name="voto" id="b" value="joao" onclick="pegaRadio()"> João dos Reis Silva <br>	 	
+							<input type="radio" name="voto" id="b" value="jdrsilva" onclick="pegaRadio()"> João dos Reis Silva <br>	 	
 						</label><br>
 
 						<label class="radio">
-							<input type="radio" name="voto" id="b" value="fabricio" onclick="pegaRadio()"> José Fabrício Barros da SIlva <br>	 
+							<input type="radio" name="voto" id="b" value="jfbdsil1" onclick="pegaRadio()"> José Fabrício Barros da SIlva <br>	 
 						</label><br>
 
 						<label class="radio">
-							<input type="radio" name="voto" id="b" value="juliano" onclick="pegaRadio()"> Juliano Santana dos Santos <br>	  
+							<input type="radio" name="voto" id="b" value="jpereira" onclick="pegaRadio()"> Juliano Santana dos Santos <br>	  
 						</label><br> 
 					</div><!--/col-md-6 -->
 
 					<div class="col-md-6"  >
 						 <label class="radio">
-							<input type="radio" name="voto" id="b" value="jhonatan" onclick="pegaRadio()"> Jhonatan Elias Monteiro Lima <br>	  
+							<input type="radio" name="voto" id="b" value="jemlima" onclick="pegaRadio()"> Jhonatan Elias Monteiro Lima <br>	  
 						</label><br> 
 
 						<label class="radio">
-							<input type="radio" name="voto" id="b" value="kleber" onclick="pegaRadio()"> Kleber Jose da Silva <br>	  
+							<input type="radio" name="voto" id="b" value="kjdsilv1" onclick="pegaRadio()"> Kleber Jose da Silva <br>	  
 						</label><br> 
 
 						<label class="radio">
-							<input type="radio" name="voto" id="b" value="leandra" onclick="pegaRadio()"> Leandra Darri <br>	  
+							<input type="radio" name="voto" id="b" value="ldarri" onclick="pegaRadio()"> Leandra Darri <br>	  
 						</label><br> 
 
 						<label class="radio">
-							<input type="radio" name="voto" id="b" value="leandro" onclick="pegaRadio()"> Leandro Gonçalves Costa <br>	  
+							<input type="radio" name="voto" id="b" value="lgcosta2" onclick="pegaRadio()"> Leandro Gonçalves Costa <br>	  
 						</label><br> 
 
 						<label class="radio">
@@ -404,7 +404,7 @@
 						</label><br> 
 
 						<label class="radio">
-							<input type="radio" name="voto" id="b" value="marcelo" onclick="pegaRadio()"> Marcelo Antonio Verdi <br>	  
+							<input type="radio" name="voto" id="b" value="maverdi" onclick="pegaRadio()"> Marcelo Antonio Verdi <br>	  
 						</label><br> 
 
 						<label class="radio">
@@ -412,15 +412,15 @@
 						</label><br> 
 
 						<label class="radio">
-							<input type="radio" name="voto" id="b" value="mariane" onclick="pegaRadio()"> Mariane Regina Fortunato Nunes <br>	  
+							<input type="radio" name="voto" id="b" value="mrfngama" onclick="pegaRadio()"> Mariane Regina Fortunato Nunes <br>	  
 						</label><br> 
 
 						<label class="radio">
-							<input type="radio" name="voto" id="b" value="monica" onclick="pegaRadio()"> Monica Luzia da SIlva <br>	  
+							<input type="radio" name="voto" id="b" value="mlsilva" onclick="pegaRadio()"> Monica Luzia da SIlva <br>	  
 						</label><br> 
 
 						<label class="radio">
-							<input type="radio" name="voto" id="b" value="pedro" onclick="pegaRadio()"> Pedro Felipe de Alcantara <br>	  
+							<input type="radio" name="voto" id="b" value="pfdsous2" onclick="pegaRadio()"> Pedro Felipe de Alcantara <br>	  
 						</label><br> 
 
 
