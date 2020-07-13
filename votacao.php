@@ -25,6 +25,7 @@
 		//Aqui estou pegando o usuário logado
  		$user = $_SESSION['user']; ;
 
+
  ?>
 
 <!DOCTYPE html>
@@ -47,8 +48,13 @@
 			var btn = document.getElementById('btnVoto');
 			//aqui estou passando o usuário que está logado
 			var user = "<?php echo $user;?>";
-   		 
-			if(user == 'Aldines'){
+   		
+			if(user == 'lsobiesk'){ 
+				btn.disabled = false; 
+			}  	 	
+	
+
+			if(user == 'adslima'){
 				if(votos[0].checked){
 					votos[0].disabled = true;
 					btn.disabled = true; 
@@ -56,9 +62,8 @@
 					btn.disabled = false;
 				}
 			}  				
-			
-
-			if(user == 'Alessandro'){
+			 
+			if(user == 'aalvaren'){
 				if(votos[1].checked){
 					votos[1].disabled = true;
 					btn.disabled = true; 
@@ -67,15 +72,169 @@
 				}
 			}  	
 
-			 if(user == 'Ana'){
+			 if(user == 'acarraro'){
 				if(votos[2].checked){
 					votos[2].disabled = true;
 					btn.disabled = true; 
 				}else{
 					btn.disabled = false;
 				}
-			}  	
+			}  
+
+			if(user == 'aperei17'){
+				if(votos[3].checked){
+					votos[3].disabled = true;
+					btn.disabled = true; 
+				}else{
+					btn.disabled = false;
+				}
+			} 
+
+			if(user == 'casilva'){
+				if(votos[4].checked){
+					votos[4].disabled = true;
+					btn.disabled = true; 
+				}else{
+					btn.disabled = false;
+				}
+			} 
+
+			if(user == 'cmdcost2'){
+				if(votos[5].checked){
+					votos[5].disabled = true;
+					btn.disabled = true; 
+				}else{
+					btn.disabled = false;
+				}
+			} 
+
+			if(user == 'dvrdort1'){
+				if(votos[6].checked){
+					votos[6].disabled = true;
+					btn.disabled = true; 
+				}else{
+					btn.disabled = false;
+				}
+			} 
+
+			if(user == 'jdrsilva'){
+				if(votos[7].checked){
+					votos[7].disabled = true;
+					btn.disabled = true; 
+				}else{
+					btn.disabled = false;
+				}
+			} 
+
+			if(user == 'jfbdsil1'){
+				if(votos[8].checked){
+					votos[8].disabled = true;
+					btn.disabled = true; 
+				}else{
+					btn.disabled = false;
+				}
+			} 
 			
+			if(user == 'jpereira'){
+				if(votos[9].checked){
+					votos[9].disabled = true;
+					btn.disabled = true; 
+				}else{
+					btn.disabled = false;
+				}
+			} 
+
+			if(user == 'jemlima'){
+				if(votos[10].checked){
+					votos[10].disabled = true;
+					btn.disabled = true; 
+				}else{
+					btn.disabled = false;
+				}
+			}
+
+			if(user == 'kjdsilv1'){
+				if(votos[11].checked){
+					votos[11].disabled = true;
+					btn.disabled = true; 
+				}else{
+					btn.disabled = false;
+				}
+			}
+
+			if(user == 'ldarri'){
+				if(votos[12].checked){
+					votos[12].disabled = true;
+					btn.disabled = true; 
+				}else{
+					btn.disabled = false;
+				}
+			}
+
+			if(user == 'lgcosta2'){
+				if(votos[13].checked){
+					votos[13].disabled = true;
+					btn.disabled = true; 
+				}else{
+					btn.disabled = false;
+				}
+			}
+
+			if(user == 'Luis'){
+				if(votos[14].checked){
+					votos[14].disabled = true;
+					btn.disabled = true; 
+				}else{
+					btn.disabled = false;
+				}
+			}
+
+			if(user == 'maverdi'){
+				if(votos[15].checked){
+					votos[15].disabled = true;
+					btn.disabled = true; 
+				}else{
+					btn.disabled = false;
+				}
+			}
+
+			if(user == 'Dalva'){
+				if(votos[16].checked){
+					votos[16].disabled = true;
+					btn.disabled = true; 
+				}else{
+					btn.disabled = false;
+				}
+			}
+
+			if(user == 'mrfngama'){
+				if(votos[17].checked){
+					votos[17].disabled = true;
+					btn.disabled = true; 
+				}else{
+					btn.disabled = false;
+				}
+			}
+
+			if(user == 'mlsilva'){
+				if(votos[18].checked){
+					votos[18].disabled = true;
+					btn.disabled = true; 
+				}else{
+					btn.disabled = false;
+				}
+			}
+
+			if(user == 'pfdsous2'){
+				if(votos[19].checked){
+					votos[19].disabled = true;
+					btn.disabled = true; 
+				}else{
+					btn.disabled = false;
+				}
+			}
+
+
 		}
  
 
@@ -84,7 +243,7 @@
 </head>
 <body>
 
-	<div class="container-fluid mt-5" style="border: 1px solid red;">
+	<div class="container-fluid mt-5">
 		<div class="row">
 			<div class="col-md-12">
 				<h1 style="color: white; text-align: center;">Bem vindo <?= $_SESSION['user']; ?></h1>
@@ -94,11 +253,11 @@
 
 	<form action="votacao.php" method="post" >
 		<!--aqui vai ficar os radios button para votação -->
-		<div class="container-fluid mt-3" style="border: 1px solid blue;">
-			<div class="container" style="border: 1px solid red;">
+		<div class="container-fluid mt-3 container-meio pt-3">
+			<div class="container" >
 				<div class="row">
  
-					<div class="col-md-6" style="border: 1px solid yellow;" >
+					<div class="col-md-6"  >
 						<label class="radio">
 							<input type="radio" name="voto" id="t" value="aldines" onclick="pegaRadio()"> Aldines dos Santos lima <br>
 						</label><br>
@@ -140,7 +299,7 @@
 						</label><br> 
 					</div><!--/col-md-6 -->
 
-					<div class="col-md-6" style="border: 1px solid black;">
+					<div class="col-md-6" >
 						 <label class="radio">
 							<input type="radio" name="voto" id="b" value="jhonatan" onclick="pegaRadio()"> Jhonatan Elias Monteiro Lima <br>	  
 						</label><br> 
@@ -177,10 +336,14 @@
 							<input type="radio" name="voto" id="b" value="monica" onclick="pegaRadio()"> Monica Luzia da SIlva <br>	  
 						</label><br> 
 
+						<label class="radio">
+							<input type="radio" name="voto" id="b" value="pedro" onclick="pegaRadio()"> Pedro Felipe de Alcantara <br>	  
+						</label><br> 
+
 
 					</div><!--/col-md-6 -->
 					 
-					<button class="btn btn-primary btn-lg btn-block" id="btnVoto" disabled >Votar</button> 
+					<button class="btn btn-primary btn-lg btn-block mt-3" id="btnVoto" disabled >Vote no funcionário do mês do seu setor</button> 
 				</div><!--/row votação --> 
 			</div><!--/Container -->
 		</div><!--/Container-fluid votacao -->
