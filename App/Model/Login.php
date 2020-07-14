@@ -73,52 +73,24 @@
 			$stmt = $this->conn->prepare($sql);
 			$stmt->bindValue(':pessoaVotada', $this->login->__get('pessoaVotada'));
 
-			$stmt->execute();
+			$resul = $stmt->execute();
+			//echo "o usuario ja " .$resul;
 
 			//echo "A pessoa votada é ". $this->login->__get('pessoaVotada') ."<br>";
 		}
 
-		/*
-		public function userLogado(){
-		
-			//falando que o usuário já voltou
-			//$sql = "UPDATE login SET javotou = :ok WHERE user = :user";
-			$sql = "UPDATE login SET javotou = ? WHERE user = ?";
+		public function verificaSituacao(){
+
+			$sql = "SELECT * FROM login WHERE javotou = 'Sim' and user = :usuarioLogado"; 
 			$stmt = $this->conn->prepare($sql);
-			$stmt->bindValue(1, 'Sim');
-			$stmt->bindValue(2, $this->login->__get('user'));
+			$stmt->bindValue(':usuarioLogado', $this->login->__get('user'));
 
-			return $stmt->execute();
+		    $stmt->execute();
 
+			return $stmt->rowCount();
+			
+			
 		}
-
-		public function somaVotos(){
-			//	jfbdsil votou em aldines
-			//aqui vou adicionar o voto na pessoa votada
-			$sql = "UPDATE login SET votos = votos + 1 WHERE user :pessoaVotada";
-			$stmt = $this->conn->prepare($sql);
-			$stmt->bindValue('user', $this->login->__get('pessoaVotada'));
-
-			$stmt->execute();
-		}
-
-		public function votouem(){ 
-			//aqui atribuo o voto a pessoa votada
-			$sql = "UPDATE login SET votouem = :votouem Where user = :user ";
-
-			$stmt = $this->conn->prepare($sql);
-			$stmt->bindValue(':votouem',$this->login->__get('user') );
-			$stmt->bindValue(':user',$this->login->__get('pessoaVotada'));
-
-			 //echo "Pessoa votada é ".$this->login->__get('user'). "<br>";
-			//   echo "Pessoa logada é ".$this->login->__get('user'). "<br>";
-			$stmt->execute(); 
-
-			$sql = "UPDATE login SET votos = votos + 1 WHERE user :pessoaVotada";
-
-
-		}
-		*/
 
 
 

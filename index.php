@@ -5,10 +5,19 @@
 	use App\Model\Login;
 	use App\Model\LoginModel;
 
+
+	$conn = new ConexaoBDO();
+	$loginModel = new LoginModel();
+
+	//aqui vou verificar se o usuário já votou
+	///$veriricaUsuario->login->__set('usuarioLogado', $_SESSION['logado']);
+	//$verificaUsuario = new Login($conn, $loginModel);
+	//$veriricaUsuario->verificaSituacao(); 
+ 
 	//aqui estou matando qualquer sessão que vinher pra cá
 	session_start(); 
-	unset($_SESSION['logado']);
-
+	unset($_SESSION['logado']); 
+	
  ?>
 
 
@@ -26,6 +35,21 @@
 </head>
 <body> 
 
+		<?php if(isset($_GET['javotou']) && $_GET['javotou'] == 'true'){?>
+			<!--Aqui é um alert que dou depois que o usuário vota -->
+			<div class="alert alert-danger alert-dismissible fade show" role="alert" style="text-align: center; font-size: 20px; margin-bottom: -60px;">
+  				<strong>Usuário já votou esse Mês</strong> 
+  				<!--data-dismiss="alert" serve para clicarmos no x e fechar o alert -->
+  				<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+  					<!--esse span é o icone do X -->
+    			<span aria-hidden="true">&times;</span>
+  				</button>
+			</div>;
+
+
+		<?php }?> 
+
+		<!--se vinher na url voto ok, dou um alert agradecendo o voto do usuário -->
 		<?php if(isset($_GET['voto']) && $_GET['voto'] == 'ok'){?>  
 
 			<!--Aqui é um alert que dou depois que o usuário vota -->
