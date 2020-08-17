@@ -11,11 +11,6 @@
 	print_r($_POST);
 	echo '<pre>';
 
-	//$votos = $_POST['valores'];
-	$comentario = $_POST['comentario']; 
-	//aqui estou passando um array para uma variavel 
-	$valores = implode(', ' , $_POST['valores']);
-  
 	 
 	if(isset($_POST['voto']) == ''){
 		header('Location:../../index.php?voto=null');
@@ -42,8 +37,6 @@
 	    //Aqui vou adicionar a pessoa que ela votou
 	    $votada->__set('pessoaVotada', $pessoaVotada);
 	    $votada->__set('usuarioLogado',$usuarioLogado);
-	    $votada->__set('valores', $valores);
-	    $votada->__set('comentario', $comentario);
 	    $votada = new Login($conn, $votada);
 	    $votada->votouem();
 
@@ -59,7 +52,7 @@
 
 	   
 	}
- 
+
  
 
  ?>

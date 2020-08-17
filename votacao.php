@@ -341,7 +341,7 @@
  
 					<div class="col-md-6"   >
 						<label class="radio" >
-							<input type="radio" name="voto" id="t" value="adslima" onclick="pegaRadio()">  
+							<input type="radio" name="voto" id="b" value="adslima" onclick="pegaRadio()">  
 							 Aldines dos Santos lima <br>
 						</label><br>
 

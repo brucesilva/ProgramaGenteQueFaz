@@ -8,6 +8,8 @@ class LoginModel{
 	private $senha;
 	private $usuarioLogado;
 	private $pessoaVotada;
+	private $valores;
+	private $comentario;
 
 	public function __set($atributo, $valor){
 		$this->$atributo = $valor;

@@ -51,7 +51,8 @@
 		 		//aqui estou passando a pessoa que está logada no sistema
 		 		$_SESSION['user'] = $_POST['user']; 
 		 		
-				header('Location:../../votacao.php');
+				//header('Location:../../votacao.php');
+				header('Location:../../votacao2.php');
 			}else{
 				header('Location:../../index.php?login=1');
 			}

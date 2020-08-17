@@ -39,11 +39,27 @@
 			$stmt = $this->conn->prepare($sql);
 			$stmt->execute();
 			$users = $stmt->fetchAll(\PDO::FETCH_OBJ); 
-		 
-			foreach ($users as $key => $user) {
-			 	echo $user->user;
+		 	
+
+		 	//tirei esse aqui para não aparecer no adm
+		 	//dai passo a váriavel que contem todos os dados
+			/* foreach ($users as $key => $user) {
+			 	echo $user->user. " Votos -> ". $user->votos ;
 			 	echo '<br>';
 			 } 
+			*/
+			 return $users;
+
+		}
+
+		public function vencedor(){
+			$sql = "SELECT nome, user, votos FROM login WHERE votos = (SELECT MAX(votos) FROM login)";
+			$stmt = $this->conn->prepare($sql);
+			$stmt->execute();
+
+			$vencedor = $stmt->fetchAll(\PDO::FETCH_OBJ);
+
+			return $vencedor; 
 
 		}
 
@@ -65,6 +81,16 @@
 			$stmt->bindValue(':usuarioLogado', $this->login->__get('usuarioLogado'));
 
 			$stmt->execute();
+
+			//aqui preciso incluir os valores e o comentario que a pessoa fez para o funcionário
+			$sql = "UPDATE login SET valores = :valores, comentario=:comentario WHERE user =:userLogado";
+			$stmt = $this->conn->prepare($sql);
+			$stmt->bindValue(':valores', $this->login->__get('valores')); 
+			$stmt->bindValue(':comentario', $this->login->__get('comentario'));
+			$stmt->bindValue(':userLogado', $this->login->__get('usuarioLogado')); 
+
+			$stmt->execute();
+
 		}
 
 		public function somaVotos(){
@@ -91,6 +117,7 @@
 			
 			
 		}
+
 
 
 
