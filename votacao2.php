@@ -11,11 +11,11 @@
 	//Essa sessão vem do login do index
 	session_start();
 	//verificando se o usuário está tentando acessar via URL
-	//if(!isset($_SESSION['logado']) == true){
-		//destruindo a sessão
-	//	unset($_SESSION['logado']);
-	//	header('Location:index.php?login=0');  
-	//}  
+	 if(!isset($_SESSION['logado']) == true){
+		// destruindo a sessão
+	 	unset($_SESSION['logado']);
+	 	header('Location:index.php?login=0');  
+	 }  
 
 		//verificando qual foi o radio button selecionado
 		//$votado = $_POST['voto'];
@@ -117,11 +117,20 @@
     <title>Votação Gente que Faz</title>
 
 	<meta name="viewport" content="width=device-width, initial-scale-1">
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 
-	<link rel="stylesheet" type="text/css" href="css/styleVotacao.css">
+	<!-- estilos -->
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
-	<script type="text/javascript">
+
+		<link rel="stylesheet" type="text/css" href="css/styleVotacao.css">
+
+		<!-- script -->
+		<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+		<script type="text/javascript">
 			
 
 		function pegaRadio(){
@@ -334,7 +343,8 @@
 				</div><!--/col-md-3  -->
 
 				<div class="col-md-10"> 
-					<h1 style="color: white; margin-top: 35px; margin-left: -160px; text-align: center;">Bem vindo <?=$nome; ?></h1>
+					<h1 class="teste" >Bem vindo <?=$nome; ?></h1>
+					 
 				</div><!--/col-md-9  -->
 
 			</div><!--/row  -->
@@ -419,7 +429,7 @@
 
 						 	<div class="col-md-3" style=" text-align: center; color: white">
 						 		<label class="radio">
-							 		<img src="img/user.png" width="100px" height="100px"  style="border-radius: 50px; margin: 10px 0px 20px 0px"/> 
+							 		<img src="img/adm/user.jpg" width="100px" height="100px"  style="border-radius: 50px; margin: 10px 0px 20px 0px"/> 
 									<h4 style="margin-bottom: 15px;">João</h4>   
 									<input type="radio" name="voto" id="b" value="jdrsilva" onclick="pegaRadio()">
 								</label> 
@@ -435,7 +445,7 @@
 
 						 	<div class="col-md-3" style=" text-align: center; color: white">
 						 		<label class="radio">
-							 		<img src="img/user.png" width="100px" height="100px"  style="border-radius: 50px; margin: 10px 0px 20px 0px"/> 
+							 		<img src="img/adm/juliano.jpg" width="100px" height="100px"  style="border-radius: 50px; margin: 10px 0px 20px 0px"/> 
 									<h4 style="margin-bottom: 15px;">Juliano</h4> 
 									<input type="radio" name="voto" id="b" value="jpereira" onclick="pegaRadio()">
 								</label>  
@@ -459,7 +469,7 @@
 
 						 	<div class="col-md-3" style=" text-align: center; color: white">
 						 		<label class="radio"> 
-							 		<img src="img/user.png" width="100px" height="100px"  style="border-radius: 50px; margin: 10px 0px 20px 0px"/> 
+							 		<img src="img/adm/leandro.jpg" width="100px" height="100px"  style="border-radius: 50px; margin: 10px 0px 20px 0px"/> 
 									<h4 style="margin-bottom: 15px;">Leandro</h4>   
 									<input type="radio" name="voto" id="b" value="lgcosta2" onclick="pegaRadio()">
 								</label> 
@@ -467,7 +477,7 @@
 
 						 	<div class="col-md-3" style=" text-align: center; color: white">
 						 		<label class="radio"> 
-							 		<img src="img/user.png" width="100px" height="100px"  style="border-radius: 50px; margin: 10px 0px 20px 0px"/> 
+							 		<img src="img/adm/user.jpg" width="100px" height="100px"  style="border-radius: 50px; margin: 10px 0px 20px 0px"/> 
 									<h4 style="margin-bottom: 15px;">Luis</h4>
 									<input type="radio" name="voto" id="b" value="luis" onclick="pegaRadio()">
 								</label>   
@@ -483,7 +493,7 @@
 
 						 	<div class="col-md-3" style=" text-align: center; color: white">
 						 		<label class="radio">
-							 		<img src="img/user.png" width="100px" height="100px"  style="border-radius: 50px; margin: 10px 0px 20px 0px"/> 
+							 		<img src="img/adm/userM.png" width="100px" height="100px"  style="border-radius: 50px; margin: 10px 0px 20px 0px"/> 
 									<h4 style="margin-bottom: 15px;">Dalva</h4>  
 									<input type="radio" name="voto" id="b" value="dalva" onclick="pegaRadio()">
 								</label>  
@@ -499,7 +509,7 @@
 
 						 	<div class="col-md-3" style=" text-align: center; color: white">
 						 		<label class="radio"> 
-							 		<img src="img/user.png" width="100px" height="100px"  style="border-radius: 50px; margin: 10px 0px 20px 0px"/> 
+							 		<img src="img/adm/monica.jpg" width="100px" height="100px"  style="border-radius: 50px; margin: 10px 0px 20px 0px"/> 
 									<h4 style="margin-bottom: 15px;">Mônica</h4>  
 									<input type="radio" name="voto" id="b" value="mlsilva" onclick="pegaRadio()">
 								</label>  
@@ -507,7 +517,7 @@
 
 						 	<div class="col-md-3" style=" text-align: center; color: white">
 						 		<label class="radio">
-							 		<img src="img/user.png" width="100px" height="100px"  style="border-radius: 50px; margin: 10px 0px 20px 0px"/> 
+							 		<img src="img/adm/user.jpg" width="100px" height="100px"  style="border-radius: 50px; margin: 10px 0px 20px 0px"/> 
 									<h4 style="margin-bottom: 15px;">Pedro</h4> 
 									<input type="radio" name="voto" id="b" value="pfdsous2" onclick="pegaRadio()">
 								</label>   

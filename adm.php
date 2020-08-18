@@ -1,3 +1,19 @@
+<?php 
+
+session_start();
+
+	if(!isset($_GET['adm']) =='ok'){
+		header('Location:index.php?login=0');
+	}
+
+	//aqui é para verificar se a pessoa logou ou não
+	//se não tiver passado pelo banco ela retorna para o index.
+	 //if(!isset($_SESSION['logado']) == false){ 
+	 //	header('Location:index.php?login=0');  
+	// } 
+
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 	<head>
@@ -19,36 +35,54 @@
 		
 	</head>
 
-	<body> 
+	<body>  
  
 		<!--Container Principal --> 
 		<div class="container-fluid fundoSeara"> 
+ 
 			<!--Container NavBar-->
-			<div class="container ">
+			<div class="container ">   
 				<div class="navbar">
 					 <!--logo-->
-					 <a href="#" class="navbar-brand"> 
-					 	<img src="img/searaLogo.png" width="120px">
+					 <a href="adm.php" class="navbar-brand"> 
+					 	<img src="img/searaLogo.png" width="120px">  
 					 </a>
-					  
-					 <ul class="nav">
-					 	<li class="nav-item">
-					 		<a href="App/Controller/controllerAdm.php?adm=1" class="nav-link text-white font-weight-bold "> Vencedor </a>
-					 	</li>
+					 
+					<!--essa nav que é responsavel pela responsividade do botão --> 
+					<nav class="navbar navbar-expand-lg navbar-dark"> 
+						 <!-- **** menu hamburguer ****-->
+						 <!--o data-toggle é reponsável pelo click do botão, qdo clicarmos queremos que ele abra os menus -->
+						 <!--o data-target ele define o que queremos abrir -->
+					 	<button class="navbar-toggler border" data-toggle="collapse" data-target="#menuSeara">
+					 		<span class="navbar-toggler-icon"></span>
+					 	</button>
 
-					 	<li class="nav-item">
-					 		<a href="App/Controller/controllerAdm.php?adm=2" class="nav-link text-white font-weight-bold"> Falta Votar </a>
-					 	</li>
+					 	<!--div responsável para esconder os menus dentro do botão-->
+					 	<div class="collapse navbar-collapse" id="menuSeara">
+					 		
+					 		 <ul class="navbar-nav ml-auto">
+							 	<li class="nav-item">
+							 		<a class="nav-link" href="App/Controller/controllerAdm.php?adm=1" class="nav-link text-white font-weight-bold "> Vencedor </a>
+							 	</li>
 
-					 	<li class="nav-item">
-					 		<a href="App/Controller/controllerAdm.php?adm=3" class="nav-link text-white font-weight-bold "> Geral </a>
-					 	</li>
+							 	<li class="nav-item">
+							 		<a class="nav-link" href="App/Controller/controllerAdm.php?adm=2" class="nav-link text-white font-weight-bold"> Falta Votar </a>
+							 	</li>
 
-					 	<li class="nav-item">
-					 		<a href="App/Controller/controllerAdm.php?adm=4" class="nav-link text-white font-weight-bold"> Sobre </a>
-					 	</li>
- 
-					 </ul>
+							 	<li class="nav-item">
+							 		<a class="nav-link" href="App/Controller/controllerAdm.php?adm=3" class="nav-link text-white font-weight-bold "> Valores e Comentários </a>
+							 	</li>
+
+							 	<li class="nav-item">
+							 		<a class="nav-link" href="App/Controller/controllerAdm.php?adm=4" class="nav-link text-white font-weight-bold"> Todos os dados </a>
+							 	</li>
+	 
+						 	</ul>
+
+					 	</div>  <!--fim da div para esconder os botões -->
+
+					</nav> <!--fim da nav responsividade -->
+
 				</div><!--/NavBar-->
 			</div><!--/container NavBar-->  
 		</div> <!--/container principal -->
@@ -89,6 +123,7 @@
 	 	<!--aqui é para o carousel passar a cada tantos de segundos -->
 		<script type="text/javascript">
 			
+			//responsável pelo tempo de passagem das imgs do carousel
 			$('.carousel').carousel({
   				interval: 4500
 			})

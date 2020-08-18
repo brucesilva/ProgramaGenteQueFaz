@@ -35,7 +35,7 @@
 		public function read(){
 		/*Teste de conexão e para trazer os usuários do banco*/
 
-			$sql = "SELECT * FROM login";
+			$sql = "SELECT * FROM login order by votos desc";
 			$stmt = $this->conn->prepare($sql);
 			$stmt->execute();
 			$users = $stmt->fetchAll(\PDO::FETCH_OBJ); 

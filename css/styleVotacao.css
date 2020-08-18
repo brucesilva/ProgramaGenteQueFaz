@@ -25,7 +25,55 @@ body{
 .btn{
 	font-size: 25px; 
 }
- 
-button{
-	
+
+h1{
+	color: white; 
+	margin-top: 35px; 
+	margin-left: -160px; 
+	text-align: center;
+	 
 }
+
+ 
+ 
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 400px) { 
+	textarea {
+		width: 50px;
+	}
+ 
+ }
+
+/* Small devices (landscape phones, less than 768px) */
+@media (max-width: 767.98px) { 
+	h1{
+		display: none;
+	}
+
+ 	 
+ }
+
+/* Medium devices (tablets, less than 992px) */
+@media (max-width: 991.98px) {  
+	h1{
+		 
+		margin-left: 1px;
+	}
+
+	h4{
+		font-size: 20px;
+	}
+ 
+	textarea {
+		width: 400px;
+	}
+
+}
+
+/* Large devices (desktops, less than 1200px) */
+@media (max-width: 1199.98px) { 
+	h1{
+		font-size: 35px;
+		 
+	}
+ }

@@ -1,4 +1,5 @@
 <?php 
+	
 
 	namespace App\Controller;
 
@@ -15,16 +16,17 @@
 	$LoginModel = new LoginModel(); 
 	$consulta = new Login($conn, $LoginModel); 
 
-	if($adm == 1){
-	    $vencedor =  $consulta->vencedor(); 
- 
-	   foreach ($vencedor as $key => $ganhador) {
-	    	//echo "O vencedor é o ".$ganhador->user; 
-	   } 
+	//if($adm == 1){
+	    $vencedor =  $consulta->vencedor();  
 
-	}
+	  // foreach ($vencedor as $key => $ganhador) {
+	  //  	 echo "O vencedor é o ".$ganhador->user; 
+	  //  	 echo "<br>";
+	  // } 
+
+	//}
 	//Aqui estou trazendo todos os registros do BDO
-	$select =  $consulta->read(); 
+	$todosOsDados =  $consulta->read(); 
 	//foreach ($select as $key => $value) {
 
 	//	if($value->valores == ''){
@@ -66,7 +68,7 @@
 			<div class="container ">
 				<div class="navbar">
 					 <!--logo-->
-					 <a href="#" class="navbar-brand"> 
+					 <a href="../../adm.php" class="navbar-brand"> 
 					 	<img src="../../img/searaLogo.png" width="120px">
 					 </a>
 					  
@@ -80,34 +82,90 @@
 					 	</li>
 
 					 	<li class="nav-item">
-					 		<a href="controllerAdm.php?adm=3" class="nav-link text-white font-weight-bold "> Geral </a>
+					 		<a href="controllerAdm.php?adm=3" class="nav-link text-white font-weight-bold "> Valores e Comentários </a>
 					 	</li>
 
 					 	<li class="nav-item">
-					 		<a href="controllerAdm.php?adm=4" class="nav-link text-white font-weight-bold"> Sobre </a>
+					 		<a href="controllerAdm.php?adm=4" class="nav-link text-white font-weight-bold"> Todos os dados </a>
 					 	</li>
  
 					 </ul>
 				</div><!--/NavBar-->
 			</div><!--/container NavBar-->  
 		</div> <!--/container principal -->
-
-
+ 
  	 
 	<!--Logica para saber em qual if entrar e mostra a sua lógica -->
- 	<?php if($adm ==1){ ?>
+ 	<?php if($adm ==1){ 
 
- 		<h1 class="display-3" style="text-align: center; margin-top: 150px;"> Vencedor <?php echo $ganhador->nome ?> </h1>
+ 		 foreach ($vencedor as $key => $ganhador) {
+	   	 //echo "O vencedor é o ".$ganhador->user; 
+	   	// echo "<br>"; 
+
+ 	?>
+
+ 		<h1 class="display-3" style="text-align: center; margin-top: 30px;"> Vencedor <?php echo $ganhador->nome ?> </h1>
 
 
- 	<?php } else if($adm == 2) { ?>
- 		<h1> Aqui vou fazer a lógica para o Falta Votar </h1>
+ 	<?php } } else if($adm == 2) { ?> 
+ 		<table class="table">
+		  <thead class="thead-dark">
+		    <tr>
+		      <th scope="col">Falta Votar</th> 
+		      
+		    </tr>
+		  </thead>
 
- 	<?php } else if($adm == 3) { ?>
- 		<h1> Aqui vou fazer a lógica para o Vou ver o que coloco aqui </h1>
+		 	
+		 <?php 
+		 //aqui estou verificando quem ainda não votou
+		 	foreach ($todosOsDados as $key => $value) {
+	  			if($value->javotou != ''){
+	  				//echo "Já votou ".$value->nome;
+	  				//echo "<br>";
+	  			}else{
 
- 	<?php } ?>
+		  ?>
+		  <tbody>
+		    <tr>
+		    <th scope="row"><?php echo $value->nome; ?></th>
+		     
+		    </tr>  
 
+	   <?php } }   ?>
+	</table>
+ 
+ 	<?php } else if($adm == 3) { ?> 
+ 		 
+ 	<table class="table">
+	  <thead class="thead-dark">
+	    <tr>
+	      <th scope="col">User</th> 
+	      <th scope="col">Valores</th>
+	      <th scope="col">Comentários</th>
+	    </tr>
+	  </thead>
+
+	 		
+	 <?php 
+	 	foreach ($todosOsDados as $key => $value) {
+  			if($value->valores == '' && $value->valores == ''){
+
+  			}else{
+
+	  ?>
+	  <tbody>
+	    <tr>
+	    <th scope="row"><?php echo $value->votouem; ?></th>  
+	      <td><?php echo $value->valores; ?></td>
+	      <td><?php echo $value->comentario; ?></td> 
+	    </tr>  
+
+	   <?php } } }  ?>
+	</table>	
+
+
+ 
  	<?php if($adm ==4){ ?>  
  		 
  	<table class="table">
@@ -124,7 +182,7 @@
 
 	 	
 	 <?php 
-	 	foreach ($select as $key => $value) {
+	 	foreach ($todosOsDados as $key => $value) {
   
 	  ?>
 	  <tbody>
