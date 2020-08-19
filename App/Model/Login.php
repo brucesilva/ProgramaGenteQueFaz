@@ -52,6 +52,18 @@
 
 		}
 
+		public function readVotouem(){
+		/*Teste de conexão e para trazer os usuários do banco*/
+
+			$sql = "SELECT * FROM login order by votouem asc";
+			$stmt = $this->conn->prepare($sql);
+			$stmt->execute();
+			$users = $stmt->fetchAll(\PDO::FETCH_OBJ); 
+		 	 
+			 return $users;
+
+		}
+
 		public function vencedor(){
 			$sql = "SELECT nome, user, votos FROM login WHERE votos = (SELECT MAX(votos) FROM login)";
 			$stmt = $this->conn->prepare($sql);

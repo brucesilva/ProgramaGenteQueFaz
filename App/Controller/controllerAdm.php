@@ -17,16 +17,13 @@
 	$consulta = new Login($conn, $LoginModel); 
 
 	//if($adm == 1){
-	    $vencedor =  $consulta->vencedor();  
-
-	  // foreach ($vencedor as $key => $ganhador) {
-	  //  	 echo "O vencedor é o ".$ganhador->user; 
-	  //  	 echo "<br>";
-	  // } 
-
-	//}
+	$vencedor =  $consulta->vencedor();   
 	//Aqui estou trazendo todos os registros do BDO
 	$todosOsDados =  $consulta->read(); 
+
+	$votouem = $consulta->readVotouem();
+
+
 	//foreach ($select as $key => $value) {
 
 	//	if($value->valores == ''){
@@ -139,7 +136,7 @@
  		 
  	<table class="table">
 	  <thead class="thead-dark">
-	    <tr>
+	    <tr> 
 	      <th scope="col">User</th> 
 	      <th scope="col">Valores</th>
 	      <th scope="col">Comentários</th>
@@ -148,14 +145,14 @@
 
 	 		
 	 <?php 
-	 	foreach ($todosOsDados as $key => $value) {
+	 	foreach ($votouem as $key => $value) {
   			if($value->valores == '' && $value->valores == ''){
 
   			}else{
 
 	  ?>
 	  <tbody>
-	    <tr>
+	    <tr> 
 	    <th scope="row"><?php echo $value->votouem; ?></th>  
 	      <td><?php echo $value->valores; ?></td>
 	      <td><?php echo $value->comentario; ?></td> 
@@ -172,6 +169,7 @@
 	  <thead class="thead-dark">
 	    <tr>
 	      <th scope="col">Nome</th>
+	      <th scope="col">CPF</th>
 	      <th scope="col">User</th>
 	      <th scope="col">Qtd Votos</th>
 	      <th scope="col">Votou Em</th>
@@ -189,6 +187,7 @@
 	    <tr>
 	    <th scope="row"><?php echo $value->nome; ?></th> 
 	      <td><?php echo $value->user; ?></td> 
+	      <td><?php echo $value->cpf; ?></td> 
 	      <td><?php echo $value->votos; ?></td>
 	      <td><?php echo $value->votouem; ?></td>
 	      <td><?php echo $value->valores; ?></td>

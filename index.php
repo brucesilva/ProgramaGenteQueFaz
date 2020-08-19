@@ -115,6 +115,11 @@ session_start();
 			<div> 
 				<h6 style="margin-top: 70px; text-align: center;">&#169 2020 -  Fabrício Barros</h6>
 			</div>
+
+			<div style="margin-top: -80px; margin-left: 400px">
+				<img src="https://www.seara.com.br/media/img/iconsm/sac-footer.png" alt="Sac Seara">
+			</div>
+			
 		</footer>
 		<!--/fim Footer-->
 	 
