@@ -14,7 +14,7 @@
 	if(!isset($_SESSION['logado']) == true){
 		//destruindo a sessão
 		unset($_SESSION['logado']);
-		header('Location:index.php?login=0');  
+		header('Location:login.php?login=0');  
 	}  
 
 		//verificando qual foi o radio button selecionado

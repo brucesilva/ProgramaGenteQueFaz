@@ -29,7 +29,7 @@
 	 //Lógica pra pegar o usuário e a senha e verificar se os dois existem
 	 //Aqui estou verificando se o formulário está sendo preenchido
 	 if(isset($_POST['user']) && $_POST['user'] == '' || $_POST['password'] == ''){
-	 	 header('Location:../../index.php?false'); 
+	 	 header('Location:../../login.php?false'); 
 
 	 }else{	
 	 	//aqui vou enviar o usuário e o login para verificar se existe no BDO
@@ -48,7 +48,7 @@
 	 	//aqui vou verificar se o usuário já votou 
 	 	//se ele já tiver votado, mando para pág index com paramentro true
 	 	 if($login->verificaSituacao() > 0){
-	 	 	 header('Location:../../index.php?javotou=true');
+	 	 	 header('Location:../../login.php?javotou=true');
 
 	 	 } else {
 		 	/* se caso tenha o usuário e a senha, o retorno é 1 */
@@ -62,7 +62,7 @@
 				//header('Location:../../votacao.php');
 				 header('Location:../../votacao2.php');
 			}else{
-				 header('Location:../../index.php?login=1');
+				 header('Location:../../login.php?login=1');
 			}
 
 		  } 

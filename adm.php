@@ -3,7 +3,7 @@
 session_start();
 
 	if(!isset($_GET['adm']) =='ok'){
-		header('Location:index.php?login=0');
+		header('Location:login.php?login=0');
 	}
 
 	//aqui é para verificar se a pessoa logou ou não
@@ -112,10 +112,12 @@ session_start();
 			</div> 
 		<!--/Fim Carouser -->
 
-		<!--footer-->
-		<footer>
-			<div class="rodape">
 
+		 
+		<!--footer-->
+		<footer> 
+			<div> 
+				<h6 style="margin-top: 100px; text-align: center;">&#169 2020 -  Fabrício Barros</h6>
 			</div>
 		</footer>
 		<!--/fim Footer-->

@@ -13,7 +13,7 @@
 
 	 
 	if(isset($_POST['voto']) == ''){
-		header('Location:../../index.php?voto=null');
+		header('Location:../../login.php?voto=null');
 
 	}else{
 		//aqui vou fazer a lógica para inerir no BDO
@@ -45,14 +45,12 @@
 	    $votos = new Login($conn, $votos);
 	    $votos->somaVotos();
 
-	    header('Location:../../index.php?voto=ok');
+	    header('Location:../../login.php?voto=ok');
 
 	    echo 'Usuário logado é o '.$usuarioLogado. "<br>";
 	    echo 'Ele votou no '.$pessoaVotada;
 
 	   
-	}
-
- 
+	} 
 
  ?>
