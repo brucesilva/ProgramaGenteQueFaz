@@ -31,8 +31,7 @@ session_start();
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 
-		<script src="js/script.js"></script>
-		
+		 
 	</head>
 
 	<body>  
@@ -62,9 +61,9 @@ session_start();
 					 		
 					 		 <ul class="navbar-nav ml-auto">
 							 	<li class="nav-item">
-							 		<a class="nav-link" href="App/Controller/controllerAdm.php?adm=1" class="nav-link text-white font-weight-bold "> Vencedor </a>
+							 		<a  class="nav-link" href="App/Controller/controllerAdm.php?adm=1" id="vencedor" class="nav-link text-white font-weight-bold "> Vencedor </a>    
 							 	</li>
-
+ 
 							 	<li class="nav-item">
 							 		<a class="nav-link" href="App/Controller/controllerAdm.php?adm=2" class="nav-link text-white font-weight-bold"> Falta Votar </a>
 							 	</li>
@@ -87,7 +86,8 @@ session_start();
 			</div><!--/container NavBar-->  
 		</div> <!--/container principal -->
 
-		<!--Carouser --> 
+		<!--Carouser -->
+		<div id="envolveCarousel" > <!--coloquei essa div para tentar pegar no ajax -->
 			<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
 			  <div class="carousel-inner">
 			    <div class="carousel-item active">
@@ -110,9 +110,8 @@ session_start();
 			    <span class="sr-only">Next</span>
 			  </a>
 			</div> 
-		<!--/Fim Carouser -->
-
-
+		</div><!--/Fim envolve Carouser --> 
+		<!--/Fim Carouser --> 
 		 
 		<!--footer-->
 		<footer> 
@@ -124,13 +123,22 @@ session_start();
 	 
 	 	<!--aqui é para o carousel passar a cada tantos de segundos -->
 		<script type="text/javascript">
-			
-			//responsável pelo tempo de passagem das imgs do carousel
-			$('.carousel').carousel({
-  				interval: 4500
-			})
 
+			$(document).ready(()=>{
+				$('#vencedor').on('click', () => {
+					$('#envolveCarousel').load('votacao2.php')
+					 
+				})
+			 
+				//responsável pelo tempo de passagem das imgs do carousel
+				$('.carousel').carousel({
+	  				interval: 4500
+				})
+
+
+			})
 		</script>	 
 		
  	</body> 
 </html>
+

@@ -84,17 +84,23 @@ session_start();
 		</div> <!--/container principal -->
 
 		<!--Carouser --> 
-			<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+			<div id="carouselExampleControls" class="carousel slide" data-ride="carousel"> 
 			  <div class="carousel-inner">
-			    <div class="carousel-item active">
+
+			  	 <div class="carousel-item active">
+			     <img class="slides"  src="img/adm/vencedorAtual.png" class="d-block  " alt="...">
+			    </div>
+
+			    <div class="carousel-item ">
 			     <img class="slides" src="img/bacon.png" class="d-block" alt="...">
 			    </div>
+
 			    <div class="carousel-item">
 			      <img class="slides"  src="img/produtos.png" class="d-block w-70 " alt="...">
 			    </div>
 			    <div class="carousel-item">
 			     <img class="slides"  src="img/qualidade.png" class="d-block w-70" alt="...">
-			    </div>
+			    </div> 
 			  </div>
 
 			  <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
@@ -125,7 +131,8 @@ session_start();
 	 
 	 	<!--aqui é para o carousel passar a cada tantos de segundos -->
 		<script type="text/javascript">
-			
+
+
 			//responsável pelo tempo de passagem das imgs do carousel
 			$('.carousel').carousel({
   				interval: 2500

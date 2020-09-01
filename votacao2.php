@@ -422,7 +422,7 @@
 						 	<div class="col-md-3" style=" text-align: center; color: white">
 						 		<label class="radio">
 							 		<img src="img/adm/debora.png" width="100px" height="100px"  style="border-radius: 50px; margin: 10px 0px 20px 0px"/> 
-									<h4 style="margin-bottom: 15px;">Debora</h4>   
+									<h4 style="margin-bottom: 15px;">Débora</h4>   
 									<input type="radio" name="voto" id="b" value="dvrdort1" onclick="pegaRadio()">
 								</label> 
 						 	</div><!--col-md-4--> 
@@ -477,7 +477,7 @@
 
 						 	<div class="col-md-3" style=" text-align: center; color: white">
 						 		<label class="radio"> 
-							 		<img src="img/adm/user.jpg" width="100px" height="100px"  style="border-radius: 50px; margin: 10px 0px 20px 0px"/> 
+							 		<img src="img/adm/luiz.jpg" width="100px" height="100px"  style="border-radius: 50px; margin: 10px 0px 20px 0px"/> 
 									<h4 style="margin-bottom: 15px;">Luis</h4>
 									<input type="radio" name="voto" id="b" value="luis" onclick="pegaRadio()">
 								</label>   
@@ -489,14 +489,6 @@
 									<h4 style="margin-bottom: 15px;">Marcelo</h4>  
 									<input type="radio" name="voto" id="b" value="maverdi" onclick="pegaRadio()"> 
 								</label> 
-						 	</div><!--col-md-4--> 
-
-						 	<div class="col-md-3" style=" text-align: center; color: white">
-						 		<label class="radio">
-							 		<img src="img/adm/userM.png" width="100px" height="100px"  style="border-radius: 50px; margin: 10px 0px 20px 0px"/> 
-									<h4 style="margin-bottom: 15px;">Dalva</h4>  
-									<input type="radio" name="voto" id="b" value="dalva" onclick="pegaRadio()">
-								</label>  
 						 	</div><!--col-md-4--> 
 
 						 	<div class="col-md-3" style=" text-align: center; color: white">
@@ -596,7 +588,7 @@
 							 <textarea cols="90" rows="4" name="comentario"></textarea>
 						</div><!--col md 12--> 
 
-						<button class="btn btn-primary mb-2 ml-3 mt-2" id="btnVoto" style="margin-top: 2px">Deixe aqui seu voto e feedback </button> 
+						<button class="btn btn-primary mb-2 ml-3 mt-2" id="btnVoto" disabled style="margin-top: 2px">Deixe aqui seu voto e feedback </button> 
 						
 					</div><!--col md 12--> 
 					<!--textearea Comentário-->  

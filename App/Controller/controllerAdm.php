@@ -1,5 +1,4 @@
-<?php 
-	
+<?php  
 
 	namespace App\Controller;
 
@@ -22,18 +21,7 @@
 	$todosOsDados =  $consulta->read(); 
 
 	$votouem = $consulta->readVotouem();
-
-
-	//foreach ($select as $key => $value) {
-
-	//	if($value->valores == ''){
-			 
-	//	}else{
-	//		 echo $value->valores;
-	//	     echo "<br>";
-	//	}
-		 
-	//}
+ 
 
  ?>
 
